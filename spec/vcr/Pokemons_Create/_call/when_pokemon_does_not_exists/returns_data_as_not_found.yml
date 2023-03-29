@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pokeapi.co/api/v2/pokemon/cleyton
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Wed, 29 Mar 2023 20:47:02 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      content-length:
+      - '9'
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - public, max-age=3600, s-maxage=3600
+      etag:
+      - W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+      function-execution-id:
+      - hrmuvsz7rdya
+      x-cloud-trace-context:
+      - 5680898d9cd5d59baf0f6714cac7b709
+      x-powered-by:
+      - Express
+      x-served-by:
+      - cache-jnb7026-JNB
+      x-cache:
+      - MISS
+      x-cache-hits:
+      - '0'
+      x-timer:
+      - S1680122820.044587,VS0,VE1884
+      vary:
+      - Accept-Encoding, x-fh-requested-host, accept-encoding
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      cf-cache-status:
+      - HIT
+      age:
+      - '0'
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6ebfXUOJmTMWCSe4pS7fsY4n%2FMUP5IW6LeQX%2By3TSi39RkZAgI0%2FXBCYkQYc%2F7AtKLM%2B%2FEhqvxY1OKWmjWD6t0qlBbNi7xUqNVvLQotUuhGOTktAB5Ad97wEeSEG"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 7afaf737cef631ef-MIA
+    body:
+      encoding: UTF-8
+      string: Not Found
+  recorded_at: Wed, 29 Mar 2023 20:47:02 GMT
+recorded_with: VCR 6.1.0
