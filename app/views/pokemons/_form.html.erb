@@ -1,0 +1,8 @@
+<%= form_with model: pokemon do |f| %>
+    <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
