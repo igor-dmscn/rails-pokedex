@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pokeapi.co/api/v2/pokemon/megazord
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Thu, 30 Mar 2023 17:59:04 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      content-length:
+      - '9'
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - public, max-age=3600, s-maxage=3600
+      etag:
+      - W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+      function-execution-id:
+      - mgqbz6nioeuu
+      x-cloud-trace-context:
+      - 1216845a4b67326ce6ef8e8db29aad1e;o=1
+      x-powered-by:
+      - Express
+      x-served-by:
+      - cache-jnb7023-JNB
+      x-cache:
+      - MISS
+      x-cache-hits:
+      - '0'
+      x-timer:
+      - S1680198972.079405,VS0,VE1720
+      vary:
+      - Accept-Encoding, x-fh-requested-host, accept-encoding
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      cf-cache-status:
+      - HIT
+      age:
+      - '171'
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=c85OuYdpIo9YkQD2EPBdE%2FBn9npH%2FKx%2BUcqNi0JYF0FA8tyDrKoRuXiaWbrNbxRYNk%2FOSJ2Rw8tjPmnpxt1EZppGn0us6gfqXEYTXDenDX%2BO0LwQH1OzCi9z%2Blf0"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 7b023e8d7ba78dfa-MIA
+    body:
+      encoding: UTF-8
+      string: Not Found
+  recorded_at: Thu, 30 Mar 2023 17:59:04 GMT
+recorded_with: VCR 6.1.0

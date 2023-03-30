@@ -1,0 +1,11 @@
+<div id="<%= @pokemon.id %>">
+  <p>
+    <strong>Name:</strong>
+    <%= @pokemon.name %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this pokemon", pokemon %>
+    <%= link_to 'Edit this pokemon', edit_pokemon_path(pokemon) %>
+  <% end %>
+</div>
