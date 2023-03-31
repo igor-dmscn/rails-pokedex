@@ -12,8 +12,10 @@ class PokemonsController < ApplicationController
   end
 
   def create
-    pokemon_name = params["pokemon"]["name"]
-    result = Pokemons::Create.call(pokemon_name:)
+    pokemon_name = params['pokemon']['name']
+    trainer_id = params['pokemon']['trainer_id']
+
+    result = Pokemons::Create.call(pokemon_name:, trainer_id:)
 
     if result.success?
       redirect_to pokemon_path(result.data)
@@ -26,7 +28,7 @@ class PokemonsController < ApplicationController
   private
 
   def pokemon_params
-    params.require(:pokemon).permit(:name)
+    params.require(:pokemon).permit(:name, :trainer_id)
   end
 
   def set_pokemon

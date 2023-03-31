@@ -10,11 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_130305) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_31_133805) do
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "trainer_id", null: false
+    t.index ["trainer_id"], name: "index_pokemons_on_trainer_id"
   end
 
+  create_table "trainers", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "master_trainer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["master_trainer_id"], name: "index_trainers_on_master_trainer_id"
+  end
+
+  add_foreign_key "pokemons", "trainers"
+  add_foreign_key "trainers", "trainers", column: "master_trainer_id"
 end
