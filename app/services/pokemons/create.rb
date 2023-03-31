@@ -1,10 +1,11 @@
 module Pokemons
   class Create < ApplicationService
 
-    attr_reader :pokemon_name
+    attr_reader :pokemon_name, :trainer_id
 
-    def initialize(pokemon_name:)
+    def initialize(pokemon_name:, trainer_id:)
       @pokemon_name = pokemon_name
+      @trainer_id = trainer_id
     end
 
     def call
@@ -15,6 +16,7 @@ module Pokemons
       end
 
       pokemon = result.data
+      pokemon.trainer_id = trainer_id
 
       if pokemon.save
         return SuccessResult.new(data: pokemon)
