@@ -1,0 +1,11 @@
+<div id="<%= @trainer.id %>">
+  <p>
+    <strong>Name:</strong>
+    <%= @trainer.name %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this trainer", trainer %>
+    <%= link_to 'Edit this trainer', edit_trainer_path(trainer) %>
+  <% end %>
+</div>
