@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :pokemons, except: [:update, :edit, :delete]
   resources :trainers, except: [:update, :edit, :delete]
+  resources :pokedexes, except: [:update, :edit, :delete]
 end

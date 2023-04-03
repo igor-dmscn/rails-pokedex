@@ -1,0 +1,11 @@
+<div id="<%= @pokedex.id %>">
+  <p>
+    <strong>Trainer:</strong>
+    <%= @pokedex.trainer_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this pokedex", pokedex %>
+    <%= link_to 'Edit this pokedex', edit_pokedex_path(pokedex) %>
+  <% end %>
+</div>

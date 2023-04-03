@@ -1,0 +1,8 @@
+<%= form_with model: pokedex do |f| %>
+    <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+    <% end %>
+    <%= f.label :trainer_id %>
+    <%= f.text_field :trainer_id %>
+    <%= f.submit %>
+<% end %>
